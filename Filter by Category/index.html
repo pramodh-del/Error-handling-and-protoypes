@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Filter By Category</title>
+</head>
+
+<body>
+    <input type="text" id="category" />
+    <button onclick="filterProducts()">Filter Products</button>
+    <ul id="products"></ul>
+    <script src="script.js"></script>
+    <script>
+        function filterProducts() {
+            var category = document.getElementById("category").value;
+            var products = [
+                {
+                    "name": "Product 1",
+                    "category": "Category 1"
+                },
+                {
+                    "name": "Product 2",
+                    "category": "Category 2"
+                },
+                {
+                    "name": "Product 3",
+                    "category": "Category 3"
+                }
+            ];
+
+            var filteredProducts = filterByCategory(products, category);
+
+            var productsList = document.getElementById("products");
+            for (var i = 0; i < filteredProducts.length; i++) {
+                var product = filteredProducts[i];
+                var li = document.createElement("li");
+                li.textContent = product.name;
+                productsList.appendChild(li);
+            }
+        }
+    </script>
+</body>
+
+</html>

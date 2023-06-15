@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Class</title>
+</head>
+
+<body>
+    <input type="text" id="name" />
+    <button onclick="printDetails()">Print Details</button>
+    <p id="output"></p>
+    <script src="script.js"></script>
+    <script>
+        function printDetails() {
+            var name = document.getElementById("name").value;
+            var student = Object.create(Student);
+            student.name = name;
+            student.printDetails();
+        }
+    </script>
+</body>
+
+</html>

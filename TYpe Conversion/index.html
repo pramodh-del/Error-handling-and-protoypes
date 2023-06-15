@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Convert to Number</title>
+</head>
+
+<body>
+    <input type="text" id="input" />
+    <button onclick="convertToNumber()">Convert</button>
+    <p id="output"></p>
+    <script src="script.js"></script>
+    <script>
+        function convertToNumber() {
+            var input = document.getElementById("input");
+            var output = document.getElementById("output");
+            var number = convertToNumber(input.value);
+            output.innerHTML = number;
+        }
+    </script>
+</body>
+
+</html>

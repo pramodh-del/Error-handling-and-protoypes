@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator Class</title>
+</head>
+
+<body>
+    <input type="number" id="x" />
+    <input type="number" id="y" />
+    <button onclick="add()">Add</button>
+    <p id="output"></p>
+    <script src="script.js"></script>
+    <script>
+        function add() {
+            var x = document.getElementById("x").value;
+            var y = document.getElementById("y").value;
+            var sum = Calculator.add(x, y);
+            var output = document.getElementById("output");
+            output.innerHTML = sum;
+        }
+    </script>
+</body>
+
+</html>

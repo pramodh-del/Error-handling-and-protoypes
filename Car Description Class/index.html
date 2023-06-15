@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Car Description</title>
+</head>
+
+<body>
+    <input type="text" id="company" />
+    <input type="text" id="model" />
+    <input type="number" id="year" />
+    <button onclick="getDescription()">Get Description</button>
+    <p id="output"></p>
+    <script src="script.js"></script>
+    <script>
+        function getDescription() {
+            var company = document.getElementById("company").value;
+            var model = document.getElementById("model").value;
+            var year = document.getElementById("year").value;
+            var car = new Car(company, model, year);
+            var output = document.getElementById("output");
+            var description = car.getDescription();
+            output.innerHTML = description;
+        }
+    </script>
+</body>
+
+</html>

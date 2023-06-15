@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User Class</title>
+</head>
+
+<body>
+    <input type="text" id="username" />
+    <input type="password" id="password" />
+    <button onclick="setPassword()">Set Password</button>
+    <p id="output"></p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function setPassword() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var user = new User(username, password);
+            user.setPassword(password);
+            var output = document.getElementById("output");
+            output.innerHTML = `Username: ${username}, Password: ${user.getPassword()}`;
+        }
+    </script>
+</body>
+
+</html>
